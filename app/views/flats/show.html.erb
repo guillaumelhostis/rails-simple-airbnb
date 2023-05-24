@@ -1,0 +1,12 @@
+<h1><%= @flat.name  %></h1>
+
+<p><%= @flat.address %></p>
+
+
+
+<%= link_to "EDIT FLAT", edit_flat_path %>
+<%= link_to "ALL FLATS", flats_path %>
+<%= link_to "Remove", flat_path(@flat),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                class: "ms-3 text-danger"
+            %>
